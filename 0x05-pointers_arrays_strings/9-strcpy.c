@@ -3,7 +3,7 @@
 
 /**
  * *_strcpy - copies the string pointed to by src.
- * includding the terminating null byte (\0)
+ * including the terminating null byte (\0)
  * to the buffer pointed to by dest.
  * @dest: pointer to the buffer
  * @src: string to be copied
@@ -14,6 +14,8 @@
 char *_strcpy(char *dest, char *src)
 {
 	int len, i;
+
+	len = 0;
 
 	while (src[len] != '\0')
 	{
