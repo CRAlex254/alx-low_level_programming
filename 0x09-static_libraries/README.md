@@ -1,1 +1,1 @@
-A Readme file for static libraries that creates files containing different functions.
+A Readme file for the static libraries directory.
