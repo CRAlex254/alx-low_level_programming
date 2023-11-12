@@ -1,17 +1,14 @@
 #include <stdio.h>
-
 /**
- * main - main function
- *
- * Return: always 0
+ * main - Prints single digit numbers
+ * Return: Always 0
  */
-
 int main(void)
 {
-	int i;
+	char y;
 
-	for (i = 0 ; i < 10 ; i++)
-		printf("%d", i);
-	printf("\n");
+	for (y = '0'; y <= '9'; y++)
+	putchar(y);
+	putchar('\n');
 	return (0);
 }

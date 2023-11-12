@@ -4,7 +4,7 @@
 /**
  * main - check the code
  *
- * Return: Always 0.
+ * Return: Always 0
  */
 int main(void)
 {
@@ -18,3 +18,4 @@ int main(void)
 	printf("a=%d, b=%d\n", a, b);
 	return (0);
 }
+

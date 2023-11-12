@@ -1,1 +1,1 @@
-A readme file for the 0x0A-argc_argv directory
+A readme for my argc and argv readme

@@ -1,19 +1,17 @@
 #include <stdio.h>
-
 /**
- * main - main function
- *
- * Return: always 0
+ * main - Prints alphabet in both lowercase and uppercase
+ * Return: Always 0
  */
-
 int main(void)
 {
-	char i;
+	char c;
 
-	for (i = 'a' ; i <= 'z' ; i++)
-		putchar(i);
-	for (i = 'A' ; i <= 'Z' ; i++)
-		putchar(i);
+	for (c = 'a'; c <= 'z'; c++)
+	putchar(c);
+
+	for (c = 'A'; c <= 'Z'; c++)
+	putchar(c);
 	putchar('\n');
 	return (0);
 }

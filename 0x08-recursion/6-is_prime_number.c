@@ -1,37 +1,43 @@
 #include "main.h"
 
-
 /**
- *comparar - function that returns the power of number
- *@n: original number
- *@y: counter to compare multiplication
- *
- *Return: square root
+ * helperFunction - returns 0 or 1
+ * @num: number
+ * @j: possible factor
+ * Return: 0 if not prime, 1 if prime
  */
-
-int comparar(int n, int y)
+int helperFunction(int num, int j)
 {
-	int count = 0;
-
-	if (y <= n)
+	if (j < num)
 	{
-		if (n % y == 0)
-			count++;
-		return (count + comparar(n, y + 1));
+		if (num % j == 0)
+		{
+			return (0);
+		}
+		else
+		{
+			return (helperFunction(num, j + 1));
+		}
 	}
-	return (count);
+	else
+	{
+		return (1);
+	}
 }
 
 /**
-*is_prime_number - return 1 if is number prime
-*@n: number to evaluate
-*Return: 1 or 0
-*/
-
+ * is_prime_number - checks if number is prime or not
+ * @n: number to be checked
+ * Return: 1 if number is prime, 0 if number is not prime
+ */
 int is_prime_number(int n)
 {
-	if (comparar(n, 1) == 2)
-		return (1);
-	else
+	if (n <= 1)
+	{
 		return (0);
+	}
+	else
+	{
+		return (helperFunction(n, 2));
+	}
 }

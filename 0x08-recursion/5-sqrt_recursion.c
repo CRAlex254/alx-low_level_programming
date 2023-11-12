@@ -1,34 +1,46 @@
 #include "main.h"
 
 /**
- *comparar - function that returns the power of number
- *@n: original number
- *@y: counter to compare multiplication
+ * helperFunction - checks if sqrt of number exists
+ * @num: number
+ * @pSqrt: possible sqrt of number
  *
- *Return: square root
+ * Return: sqrt of number or -1 for error
  */
-
-int comparar(int n, int y)
+int helperFunction(int num, int pSqrt)
 {
-	if (y * y == n)
+	if ((pSqrt * pSqrt) == num)
 	{
-		return (y);
+		return (pSqrt);
 	}
-	else if (y * y > n)
+	else
 	{
-		return (-1);
-
+		if ((pSqrt * pSqrt) > num)
+		{
+			return (-1);
+		}
+		else
+		{
+			return (helperFunction(num, pSqrt + 1));
+		}
 	}
-	return (comparar(n, y + 1));
 }
 
 /**
-*_sqrt_recursion - function that returns the power of number
-*@n: number
-*Return: the natural square root
-*/
-
+ * _sqrt_recursion - returns the natural square root of a number.
+ * @n: number to find sqrt of.
+ *
+ * Return: square root of n and -1 if n does
+ * not have a natural sqrt
+ */
 int _sqrt_recursion(int n)
 {
-	return (comparar(n, 1));
+	if (n < 0)
+	{
+		return (-1);
+	}
+	else
+	{
+		return (helperFunction(n, 0));
+	}
 }

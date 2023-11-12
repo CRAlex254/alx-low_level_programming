@@ -1,1 +1,1 @@
-A readme file for the variadic functions directory
+My readme for variadic functions

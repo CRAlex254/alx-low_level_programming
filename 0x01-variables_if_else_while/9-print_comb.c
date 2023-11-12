@@ -1,24 +1,21 @@
 #include <stdio.h>
-
 /**
- * main - main function
- *
- * Return: always 0
+ * main - Prints single digit numbers
+ * Return: Always 0
  */
-
 int main(void)
 {
-	int i;
+	int n;
 
-	for (i = 0 ; i < 10 ; i++)
+	for (n = '0'; n <= '9'; n++)
 	{
-		if (i == 9)
-			putchar(i + '0');
-		else
-		{      putchar(i + '0');
-		       putchar(',');
-		       putchar(' ');
-		}
+	putchar(n);
+	if (n != '9')
+	{
+	putchar(',');
+	putchar(' ');
 	}
+	}
+	putchar('\n');
 	return (0);
 }

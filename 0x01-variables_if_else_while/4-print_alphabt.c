@@ -1,19 +1,19 @@
-
 #include <stdio.h>
-
 /**
- * main - main function
- *
- * Return: always 0
+ * main - Prints alphabet except q and e
+ * Return: Always 0
  */
-
 int main(void)
 {
-	char i;
+	char c, e, q;
 
-	for (i = 'a' ; i <= 'z' ; i++)
-		if (i != 'q' && i != 'e')
-			putchar(i);
+	e = 'e';
+	q = 'q';
+	for (c = 'a'; c <= 'z'; c++)
+	{
+		if (c != e && c != q)
+		putchar(c);
+	}
 	putchar('\n');
 	return (0);
 }

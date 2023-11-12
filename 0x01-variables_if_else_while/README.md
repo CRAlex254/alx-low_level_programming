@@ -1,1 +1,1 @@
-this is my readme
+Assigns a random number to the value n
